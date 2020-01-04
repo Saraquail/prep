@@ -1,3 +1,6 @@
+https://repl.it/@sararmills/Wiseperson-generator-drill
+
+
 function wisePerson(wiseType='goat', whatToSay='hello world') {
   const elegant = `A wise ${wiseType} once said: "${whatToSay}."`;
   return(elegant);
