@@ -1,0 +1,26 @@
+function shouter(whatToShout = 'as you can hear i am whispering') {
+
+return(whatToShout.toUpperCase()+'!!!');
+}
+shouter();
+/* From here down, you are not expected to 
+   understand.... for now :)  
+   
+   
+   Nothing to see here!
+   
+
+
+// tests
+*/
+function testShouter() {
+  const whatToShout = 'as you can hear i am whispering';
+  const expected = 'AS YOU CAN HEAR I AM WHISPERING!!!';
+  if (shouter(whatToShout) === expected) {
+    console.log('SUCCESS: `shouter` is working');
+  } else {
+    console.log('FAILURE: `shouter` is not working');
+  }
+}
+
+testShouter();
