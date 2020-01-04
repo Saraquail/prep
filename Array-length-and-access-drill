@@ -1,0 +1,85 @@
+https://repl.it/@sararmills/Array-length-and-access-drill
+
+
+
+function findLength(array) {
+  // your code goes here
+  return(array.length);
+}
+
+function accessLastItem(array) {
+  // your code goes here
+  let last = array[array.length-1];
+
+  return(last);
+}
+
+/* From here down, you are not expected to 
+   understand.... for now :)  
+   
+   
+   Nothing to see here!
+   
+
+
+// tests
+
+*/
+function testFunctionWorks(fn, input, original, expected) {
+  output = fn(input);
+  if (output === expected && compareInputs(input, original)) {
+    console.log('SUCCESS: `' + fn.name + '` works on `[' + input + ']`');
+    return true;
+  } else if (output === expected && !compareInputs(input, original)) {
+    console.error(
+      'FAILURE: `' +
+        fn.name +
+        '([' +
+        original +
+        '])` altered the input to ' +
+        '`([' +
+        input +
+        '])`');
+      return false;
+    } else {
+      console.error('FAILURE: `' +
+        fn.name +
+        '([' +
+        input +
+        '])` should be ' +
+        expected +
+        ' but was ' +
+        output);
+      return false;
+  }
+}
+
+function compareInputs(newInput, origInput) {
+  if (newInput === origInput) return true;
+  if (newInput == null || origInput == null) return false;
+  if (newInput.length != origInput.length) return false;
+
+  for (var i = 0; i < newInput.length; ++i) {
+    if (newInput[i] !== origInput[i]) return false;
+  }
+  return true;
+}
+
+function runTests() {
+  const list = [1, 4, 9, 16, 25];
+  const originalList = [1, 4, 9, 16, 25];
+  const length = 5;
+  const lastItem = 25;
+
+  const testResults = [
+    testFunctionWorks(findLength, list, originalList, length),
+    testFunctionWorks(accessLastItem, list, originalList, lastItem),
+  ];
+
+  const numPassing = testResults.filter(function(result) {
+    return result;
+  }).length;
+  console.log(numPassing + ' out of ' + testResults.length + ' tests passing.');
+}
+
+runTests();
