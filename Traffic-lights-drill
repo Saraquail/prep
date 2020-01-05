@@ -1,19 +1,18 @@
 https://repl.it/@sararmills/Traffic-lights-drill
 
 
-
 function doTrafficLights() {
   const activeLight = getActiveLight();
-  if (activeLight == 'red'){
-    turnRed()
+  if (activeLight === 'red'){
+    turnRed();
   }
 
-  else if (activeLight =='yellow'){
-    turnYellow()
+  if (activeLight === 'yellow'){
+    turnYellow();
   }
 
-  else if (activeLight =='green'){
-    turnGreen()
+  if (activeLight === 'green'){
+    turnGreen();
   }
 
   // your code will replace this call
